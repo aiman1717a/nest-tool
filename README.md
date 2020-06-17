@@ -74,6 +74,3 @@ NestTool::make()->displayName('topic')
 ## Important
 This package is tested for **nova 2.0+**
 Latest tested on **nova v3.6.0**
-
-## Credit
-Huge Credit goes for [@Jawish Hameed](https://github.com/jawish) for his thaana translation plugin [Thaana Keyboard](https://github.com/jawish/jtk)

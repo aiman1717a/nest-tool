@@ -28,6 +28,7 @@ use Aiman\ThaanaTextField\ThaanaTextField;
             
             NestTool::make()
              ->usingModel(\App\Models\Topic::class)
+             ->slug('slug')
              ->orderColumn('order')
              ->parentColumn('parent_id')
              ->displayName('topic')

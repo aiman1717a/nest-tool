@@ -53,7 +53,7 @@ This function requires the model in which nest tool uses
 NestTool::make()->usingModel(\App\Models\Topic::class)
 ```
 
-### Order
+### Slug
 This function requires the slug field to be displayed. by default it is `slug`
 ```
 NestTool::make()->slug('slug')

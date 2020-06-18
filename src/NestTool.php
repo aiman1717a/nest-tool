@@ -33,10 +33,14 @@ class NestTool extends ResourceTool
 
         return $this;
     }
+    public function slug($slug = 'slug')
+    {
+        $this->withMeta(['slug' => $slug]);
+        return $this;
+    }
     public function usingModel(string $model)
     {
         $this->withMeta(['model' => $model]);
-
         return $this;
     }
 

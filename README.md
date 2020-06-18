@@ -54,6 +54,12 @@ NestTool::make()->usingModel(\App\Models\Topic::class)
 ```
 
 ### Order
+This function requires the slug field to be displayed. by default it is `slug`
+```
+NestTool::make()->slug('slug')
+```
+
+### Order
 This function requires the order column name in the model class above which is used for ordering
 ```
 NestTool::make()->orderColumn('order')
@@ -74,6 +80,3 @@ NestTool::make()->displayName('topic')
 ## Important
 This package is tested for **nova 2.0+**
 Latest tested on **nova v3.6.0**
-
-## Credit
-Huge Credit goes for [@Jawish Hameed](https://github.com/jawish) for his thaana translation plugin [Thaana Keyboard](https://github.com/jawish/jtk)

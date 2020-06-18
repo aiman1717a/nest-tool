@@ -13,8 +13,9 @@
                   <span class="font-semibold">
                       {{ item[displayName]  }}
                   </span>
-                  <span class="font-lighter text-80 ml-4 text-sm">{{ item.slug }}</span>
+                  <span class="font-lighter text-80 ml-4 text-sm">{{ item[slug] }}</span>
               </div>
+
           </vue-nestable-handle>
       </vue-nestable>
   </div>
@@ -44,6 +45,9 @@ export default {
         },
         displayName: function () {
             return this.panel.fields[0].display_name;
+        },
+        slug: function () {
+            return this.panel.fields[0].slug;
         }
     },
     methods: {
@@ -85,10 +89,6 @@ export default {
 </script>
 
 <style lang="scss">
-
-
-
-
 /*
 * Style for nestable
 */

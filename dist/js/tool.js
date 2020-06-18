@@ -655,6 +655,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 
@@ -681,6 +682,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
         displayName: function displayName() {
             return this.panel.fields[0].display_name;
+        },
+        slug: function slug() {
+            return this.panel.fields[0].slug;
         }
     },
     methods: {
@@ -17947,7 +17951,7 @@ var render = function() {
                     _c(
                       "span",
                       { staticClass: "font-lighter text-80 ml-4 text-sm" },
-                      [_vm._v(_vm._s(item.slug))]
+                      [_vm._v(_vm._s(item[_vm.slug]))]
                     )
                   ])
                 ]

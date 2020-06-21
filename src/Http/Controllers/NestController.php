@@ -1,7 +1,6 @@
 <?php
 namespace Aiman\NestTool\Http\Controllers;
 
-use Energon7\MenuBuilder\Http\Models\Menu;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Laravel\Nova\Http\Requests\NovaRequest;

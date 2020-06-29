@@ -69,7 +69,7 @@ NestTool::make()->orderColumn('order')
 ### Parent Id
 This function requires the parent column name in the model class above which is used for nesting items under a parent item
 ```
-NestTool::make()->parentColumn('order')
+NestTool::make()->parentColumn('parent_id')
 ```
 
 ### Topic

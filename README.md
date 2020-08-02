@@ -7,9 +7,42 @@ This Nova Package allow you to nest items in hierarchy level.
 ```
 composer require aiman/nest-tool
 ```
+## Example Migration Schema
+```
+class CreateTopicsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('topics', function (Blueprint $table) {
+            $table->id();
+            $table->text('topic');
+            $table->text('slug')->nullable();
+            $table->integer('order')->default(1);
+            $table->integer('parent_id')->nullable();
+            $table->timestamps();
+            $table->softDeletes();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('topics');
+    }
+}
+```
 
 ## Usage
-In order to use the nest tool, it requires a model to use, order column, parent column, amd the display name to be shown in each item
+In order to use the nest tool, it requires a model to use which includes a order column, parent column, amd the display name to be shown in each item. Example is shown above
 ```
 use Aiman\ThaanaTextField\ThaanaTextField;
 
@@ -55,25 +88,25 @@ NestTool::make()->usingModel(\App\Models\Topic::class)
 ```
 
 ### Slug
-This function requires the slug field to be displayed. by default it is `slug`
+This function requires the slug field to be displayed. By default it is `slug`
 ```
 NestTool::make()->slug('slug')
 ```
 
 ### Order
-This function requires the order column name in the model class above which is used for ordering
+This function requires the order column name in the model class above which is used for ordering. By default it is `order`
 ```
 NestTool::make()->orderColumn('order')
 ```
 
 ### Parent Id
-This function requires the parent column name in the model class above which is used for nesting items under a parent item
+This function requires the parent column name in the model class above which is used for nesting items under a parent item. By default it is `parent_id`
 ```
 NestTool::make()->parentColumn('parent_id')
 ```
 
 ### Topic
-This function requires the display name's column name in the model class above which is used to display in each item
+This function requires the display name's column name in the model class above which is used to display in each item. By default it is `topic`
 ```
 NestTool::make()->displayName('topic')
 ```

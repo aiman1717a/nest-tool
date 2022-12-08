@@ -2,9 +2,7 @@
 
 namespace Aiman\NestTool;
 
-use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\ResourceTool;
-use Laravel\Nova\Tool;
 
 class NestTool extends ResourceTool
 {
@@ -27,17 +25,20 @@ class NestTool extends ResourceTool
     {
         return 'nest-tool';
     }
+
     public function disable($disable = false)
     {
         $this->withMeta(['disable' => $disable]);
 
         return $this;
     }
+
     public function slug($slug = 'slug')
     {
         $this->withMeta(['slug' => $slug]);
         return $this;
     }
+
     public function usingModel(string $model)
     {
         $this->withMeta(['model' => $model]);
@@ -50,6 +51,7 @@ class NestTool extends ResourceTool
 
         return $this;
     }
+
     public function parentColumn($column = 'parent_id')
     {
         $this->withMeta(['parent_column' => $column]);

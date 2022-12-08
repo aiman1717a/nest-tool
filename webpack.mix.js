@@ -1,6 +1,10 @@
 let mix = require('laravel-mix')
 
+require('./nova.mix')
+
 mix
-  .setPublicPath('dist')
-  .js('resources/js/tool.js', 'js')
-  .sass('resources/sass/tool.scss', 'css')
+    .setPublicPath('dist')
+    .js('resources/js/tool.js', 'js')
+    .vue({ version: 3 })
+    .sass('resources/sass/tool.scss', 'css')
+    .nova('aiman/nest-tool')

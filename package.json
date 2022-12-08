@@ -1,23 +1,28 @@
 {
-    "private": true,
-    "scripts": {
-        "dev": "npm run development",
-        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "watch-poll": "npm run watch -- --watch-poll",
-        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "prod": "npm run production",
-        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
-    },
-    "devDependencies": {
-        "cross-env": "^5.0.0",
-        "laravel-mix": "^1.0",
-        "sass-loader": "^7.1.0"
-    },
-    "dependencies": {
-        "lodash": "^4.17.15",
-        "node-sass": "^4.14.1",
-        "vue": "^2.5.0",
-        "vue-nestable": "^2.5.3"
-    }
+  "private": true,
+  "scripts": {
+    "dev": "npm run development",
+    "development": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "prod": "npm run production",
+    "production": "mix --production",
+    "nova:install": "npm --prefix='../../vendor/laravel/nova' ci"
+  },
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.2.22",
+    "laravel-mix": "^6.0.41",
+    "postcss": "^8.3.11",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.56.1",
+    "vue-loader": "^16.8.3"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "node-sass": "^8.0.0",
+    "sass-loader": "^13.2.0",
+    "vue": "^3.2.45",
+    "vue3-nestable": "^3.0.3"
+  }
 }

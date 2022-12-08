@@ -1,4 +1,5 @@
-Nova.booting((Vue, router, store) => {
-    Vue.config.devtools = true
-    Vue.component('nest-tool', require('./components/Tool'))
+import Tool from './components/Tool'
+
+Nova.booting((app, store) => {
+    app.component('nest-tool', Tool)
 })

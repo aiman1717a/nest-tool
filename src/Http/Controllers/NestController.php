@@ -1,4 +1,5 @@
 <?php
+
 namespace Aiman\NestTool\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -24,7 +25,6 @@ class NestController extends Controller
             ->orderby($this->order_column)
             ->get();
     }
-
 
     public function saveItems(Request $request)
     {
